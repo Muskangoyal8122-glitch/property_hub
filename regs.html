@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Hub | Register</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f2933;
+            background: #f6f8fb;
+        }
+
+        .register-box {
+            width: min(560px, 100%);
+            padding: 30px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 18px 44px rgba(15, 23, 42, 0.10);
+        }
+
+        h1 {
+            margin-bottom: 6px;
+            color: #0f766e;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 22px;
+            color: #607080;
+            text-align: center;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #425466;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            min-height: 46px;
+            padding: 0 13px;
+            border: 1px solid #d5dce6;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        textarea {
+            min-height: 86px;
+            padding-top: 12px;
+            resize: vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #0f766e;
+        }
+
+        .actions {
+            margin-top: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        button {
+            min-height: 46px;
+            padding: 0 22px;
+            border: 0;
+            border-radius: 8px;
+            color: white;
+            background: #0f766e;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        a {
+            color: #0f766e;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        @media (max-width: 620px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .actions {
+                align-items: stretch;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-box">
+        <h1>Create Account</h1>
+        <p>Register on Property Hub to explore homes for rent or purchase.</p>
+
+        <form>
+            <div class="form-grid">
+                <div>
+                    <label for="name">Full Name</label>
+                    <input id="name" type="text" name="name" required>
+                </div>
+
+                <div>
+                    <label for="mobile">Mobile Number</label>
+                    <input id="mobile" type="tel" name="mobile" required>
+                </div>
+
+                <div class="full">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="purpose">Looking For</label>
+                    <select id="purpose" name="purpose">
+                        <option>Rent</option>
+                        <option>Buy</option>
+                        <option>Both</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="city">Preferred City</label>
+                    <input id="city" type="text" name="city" placeholder="Delhi, Noida, Gurugram">
+                </div>
+
+                <div class="full">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address"></textarea>
+                </div>
+
+                <div>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" required>
+                </div>
+
+                <div>
+                    <label for="confirm-password">Confirm Password</label>
+                    <input id="confirm-password" type="password" name="confirm-password" required>
+                </div>
+            </div>
+
+            <div class="actions">
+                <a href="index.html">Back Home</a>
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
